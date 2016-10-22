@@ -12,7 +12,7 @@ import java.util.Vector;
  */
 public class PlotModel
 {
-    Vector vx, vy;
+    Vector<Double> vx, vy;
     double xMin, yMin, xMax, yMax;
     int alloc;
     
@@ -23,8 +23,8 @@ public class PlotModel
         yMin = ymin;
         yMax = ymax;
         alloc = (int)Math.round(xmax - xmin) + 1;
-        vx = new Vector(alloc);
-        vy = new Vector(alloc);
+        vx = new Vector<>(alloc);
+        vy = new Vector<>(alloc);
     }
 
     public synchronized void addPoint(double x, double y)
@@ -34,8 +34,8 @@ public class PlotModel
             double delta = xMax - xMin;
             xMin += delta;
             xMax += delta;
-            vx = new Vector(alloc);
-            vy = new Vector(alloc);
+            vx = new Vector<>(alloc);
+            vy = new Vector<>(alloc);
         }
             
         vx.add(new Double(x));

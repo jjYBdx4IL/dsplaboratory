@@ -121,7 +121,7 @@ public class FourierFilterDialog extends JDialog
         
         middlePane.add(new JLabel("Ordinul filtrului"));
         NField = new JTextField("15");
-        if (t3.isSelected()) NField.disable();
+        if (t3.isSelected()) NField.setEnabled(false);
         middlePane.add(NField);
         
         middlePane.add(new JLabel("Pentru FTB sau FOB:"));

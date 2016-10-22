@@ -6,19 +6,13 @@ package dsplaboratory;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
 import java.text.DecimalFormat;
 
 import javax.swing.*;
 import javax.swing.border.*;
 
 import dsplaboratory.dummy.DummyVisFactory;
-import dsplaboratory.dummy.TestFilter;
 import dsplaboratory.exception.UserCancelled;
-import dsplaboratory.grafix.GrafixVisFactory;
-import dsplaboratory.soundinput.SoundInputFactory;
-import dsplaboratory.soundinput.SoundOutputFactory;
 
 /**
  * 
@@ -110,7 +104,7 @@ public class SetupDialog extends JDialog
         {
             inputChoices[i] = inputFactories[i].getName();
         }
-        inputChoice = new JComboBox(inputChoices);
+        inputChoice = new JComboBox<String>(inputChoices);
         leftPane.add(inputChoice, gbc);
 
         gbc.gridx = 1;
@@ -130,7 +124,7 @@ public class SetupDialog extends JDialog
         {
             filterChoices[i] = filterFactories[i].getName();
         }
-        filterChoice = new JComboBox(filterChoices);
+        filterChoice = new JComboBox<String>(filterChoices);
         leftPane.add(filterChoice, gbc);
 
         gbc.gridx = 1;
@@ -151,7 +145,7 @@ public class SetupDialog extends JDialog
         {
             outputChoices[i] = outputFactories[i].getName();
         }
-        outputChoice = new JComboBox(outputChoices);
+        outputChoice = new JComboBox<String>(outputChoices);
         leftPane.add(outputChoice, gbc);
 
         gbc.gridx = 1;
@@ -167,7 +161,7 @@ public class SetupDialog extends JDialog
         // Analisys Config
         gbc.gridy = 3;
         gbc.gridx = 0;
-        visualisationChoice = new JComboBox(visualisationChoices);
+        visualisationChoice = new JComboBox<String>(visualisationChoices);
         leftPane.add(visualisationChoice, gbc);
 
         gbc.gridx = 1;

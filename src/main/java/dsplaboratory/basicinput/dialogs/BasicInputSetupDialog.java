@@ -22,7 +22,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 import dsplaboratory.Input;
-import dsplaboratory.basicinput.dialogs.AbstractSignalSetupDialog;
 
 /**
  * @author Flaviu
@@ -88,7 +87,7 @@ public class BasicInputSetupDialog extends AbstractSignalSetupDialog
                 return;
             }
         	selectedSignal.setLocationRelativeTo( owner);        	
-        	selectedSignal.show();
+        	selectedSignal.setVisible(true);
         }
     }
 
@@ -131,7 +130,7 @@ public class BasicInputSetupDialog extends AbstractSignalSetupDialog
 
         gbc.gridx = 1;
         gbc.gridy = 2;
-        inputNamesSelection = new JComboBox( inputNames);
+        inputNamesSelection = new JComboBox<String>(inputNames);
         inputNamesSelection.addActionListener( new SelectionChanged());
         pane.add( inputNamesSelection, gbc);
 

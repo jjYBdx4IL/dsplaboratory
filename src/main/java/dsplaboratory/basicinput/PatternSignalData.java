@@ -27,12 +27,12 @@ public class PatternSignalData
        }
    }
    
-   protected Vector signalValues;
+   protected Vector<SignalValue> signalValues;
    protected double patternDuration;
    
    public PatternSignalData()
    {
-       signalValues = new Vector();
+       signalValues = new Vector<>();
        patternDuration = 0;
    }
    

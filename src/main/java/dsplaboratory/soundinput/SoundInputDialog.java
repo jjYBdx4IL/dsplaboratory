@@ -65,12 +65,12 @@ public class SoundInputDialog extends JDialog
                 );       	
 
        	String[] sampleRates = { "8000", "11025", "22050", "44100" };
-        sampleRateComboBox = new JComboBox(sampleRates);
+        sampleRateComboBox = new JComboBox<String>(sampleRates);
         String[] sampleSizes = { "8", "16" };
-        sampleSizeComboBox = new JComboBox(sampleSizes);
+        sampleSizeComboBox = new JComboBox<String>(sampleSizes);
         sampleSizeComboBox.addActionListener(new SetSampleSizeAction());
         String[] channels = { "1", "2" };
-        channelNumberComboBox = new JComboBox(channels);
+        channelNumberComboBox = new JComboBox<String>(channels);
         channelNumberComboBox.setSelectedIndex(0);
 
         signedCheckBox = new JCheckBox("");

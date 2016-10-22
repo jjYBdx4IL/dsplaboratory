@@ -62,20 +62,17 @@
     </prerequisites>
 
     <build>
-<!--        <plugins>
+        <plugins>
             <plugin>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>
-                <executions>
-                    <execution>
-                        <id>default-jar</id>
-                        <goals>
-                            <goal>test-jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>
+                <configuration>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                    <compilerArgs>-Xlint:unchecked</compilerArgs>
+                </configuration>
             </plugin>
-        </plugins>-->
+        </plugins>
     </build>
 
     <dependencies>

@@ -6,32 +6,13 @@
  */
 package dsplaboratory.voc;
 
-import dsplaboratory.voc.VocInputOutputFilterDialog;
-
 import java.awt.*;
-//import java.awt.Dialog;
-//import javax.swing.JFileChooser;
+import java.awt.event.ActionEvent;
+import java.io.*;
+import java.math.*;
 
 import javax.swing.*;
 import javax.swing.border.*;
-//import java.lang.*;
-//import java.awt.HeadlessException;
-
-import java.awt.event.ActionEvent;
-import java.io.*;
-import java.lang.*;
-import java.math.*;
-//import java.io.DataInputStream;
-
-import javax.*;
-
-//import java.awt.GridLayout;
-//import javax.swing.JDialog;
-//import javax.swing.JComboBox;
-//import javax.swing.JButton;
-//import javax.swing.JLabel;
-//import javax.swing.JLabel;
-//import javax.swing.JTextField;
 
 /**
  * @author Sir Costy
@@ -53,7 +34,7 @@ public class VocInputDialog extends JDialog {
    
     private JTextField FileName,SampleRateValue,SampleSizeValue;
     
-    private JComboBox ChanelNumberComboBox;
+    private JComboBox<String> ChanelNumberComboBox;
     private JButton browse,ok,cancel;
     private boolean okeyed;
     
@@ -136,7 +117,7 @@ public class VocInputDialog extends JDialog {
         gbc.gridx = 1;
         
         String[] channels = { "CH:" };
-        ChanelNumberComboBox = new JComboBox(channels);
+        ChanelNumberComboBox = new JComboBox<>(channels);
         ChanelNumberComboBox.setEnabled(false);
         ChanelNumberComboBox.setSelectedIndex(0);
         UPpanel.add(ChanelNumberComboBox,gbc);

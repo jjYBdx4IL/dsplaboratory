@@ -30,7 +30,7 @@ public class VocOutputDialog extends JDialog {
 	private int sampleSize;
 	private File WriteFile; 
 	private JLabel SampleRateLabel,SampleRateSetLabel,SampleSizeLabel,ChannelLabel;
-	private JComboBox SampleSizeValue;
+	private JComboBox<String> SampleSizeValue;
 	private JButton browse,ok,cancel;
     private boolean okeyed;
     private boolean FileChoosed;
@@ -106,7 +106,7 @@ public class VocOutputDialog extends JDialog {
         
          gbc.gridx = 1;
          String[] SampleSize = { "8 Biti","16 Biti" };
-         SampleSizeValue = new JComboBox(SampleSize);
+         SampleSizeValue = new JComboBox<>(SampleSize);
          SampleSizeValue.setEnabled(true);
          UPpanel.add(SampleSizeValue,gbc);        
          

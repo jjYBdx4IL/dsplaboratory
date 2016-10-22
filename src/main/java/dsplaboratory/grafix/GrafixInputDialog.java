@@ -4,25 +4,22 @@
  */
 package dsplaboratory.grafix;
 
-import javax.swing.JDialog;
+import java.awt.BorderLayout;
+import java.awt.Dialog;
+import java.awt.GridLayout;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
-import javax.swing.BoxLayout;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
-import java.awt.Dialog;
-import java.awt.GridLayout;
-import java.awt.HeadlessException;
-import java.awt.BorderLayout;
-import java.awt.LayoutManager;
-import java.awt.event.ActionEvent;
-import java.awt.Dimension;
 /**
  * @author marius
  *  
@@ -60,18 +57,18 @@ public class GrafixInputDialog extends JDialog
     	panouAfis=new JPanel();
     	panouSud=new JPanel();
     	String[] signals = {"Real","Normal" };
-        signalTypeComboBox = new JComboBox(signals);
+        signalTypeComboBox = new JComboBox<String>(signals);
         signalTypeComboBox.setSelectedIndex(0);
         afisareSpectruCheckBox = new JCheckBox("Vizualizare Spectru");
         afisareSpectruCheckBox.setSelected(true);
-        zoomInXComboBox=new JComboBox(zoom); 
-        zoomInYComboBox=new JComboBox(zoom); 
+        zoomInXComboBox=new JComboBox<String>(zoom);
+        zoomInYComboBox=new JComboBox<String>(zoom);
          
         
-        signalTypeOutComboBox = new JComboBox(signals);
+        signalTypeOutComboBox = new JComboBox<String>(signals);
         signalTypeOutComboBox.setSelectedIndex(0);
-        zoomOutXComboBox=new JComboBox(zoom); 
-        zoomOutYComboBox=new JComboBox(zoom); 
+        zoomOutXComboBox=new JComboBox<String>(zoom);
+        zoomOutYComboBox=new JComboBox<String>(zoom);
         
         afisareSpectruOutCheckBox = new JCheckBox("Vizualizare Spectru");
         afisareSemnalFiltratBox=new JCheckBox("Afisare Semnal Filtrat ");

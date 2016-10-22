@@ -80,7 +80,7 @@ public Input getInput(JDialog dialog)
        	 	 JRadioButton manevra=(JRadioButton)elemente.nextElement();
        	 	 if(manevra.isSelected())
        	 	 	{
-       	 	 	 NumeButonSelectat=manevra.getLabel();
+       	 	 	 NumeButonSelectat=manevra.getText();
        	 	  	 break;
        	 	 	}
        	 	}
@@ -104,7 +104,7 @@ public Input getInput(JDialog dialog)
            	 	 JRadioButton manevra=(JRadioButton)elemente.nextElement();
            	 	 if(manevra.isSelected())
            	 	 	{
-           	 	 	 NumeButonSelectat=manevra.getLabel();
+           	 	 	 NumeButonSelectat=manevra.getText();
            	 	  	 break;
            	 	 	}
            	 	}

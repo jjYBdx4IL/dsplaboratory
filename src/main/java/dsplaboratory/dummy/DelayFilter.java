@@ -9,7 +9,6 @@ import java.util.List;
 
 import dsplaboratory.DataChunk;
 import dsplaboratory.Filter;
-import dsplaboratory.SingleDataChunk;
 import dsplaboratory.VariableDataChunk;
 
 /**
@@ -18,7 +17,7 @@ import dsplaboratory.VariableDataChunk;
  */
 public class DelayFilter implements Filter
 {
-    private List queue;
+    private List<DataChunk> queue;
     private int queueSize;
     private final int delaySize; 
 
@@ -30,7 +29,7 @@ public class DelayFilter implements Filter
     
     public void start()
     {
-        queue = new LinkedList();
+        queue = new LinkedList<>();
         queueSize = 0;
         System.out.println("Delay Size : " + delaySize);
     }

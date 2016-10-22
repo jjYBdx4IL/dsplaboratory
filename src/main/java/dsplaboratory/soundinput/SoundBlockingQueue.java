@@ -27,7 +27,7 @@ import java.util.*;
 
 public class SoundBlockingQueue
 {
-    private LinkedList elements = new LinkedList();
+    private LinkedList<Object> elements = new LinkedList<>();
     private boolean    closed   = false;
 
     public class Closed extends RuntimeException

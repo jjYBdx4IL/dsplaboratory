@@ -18,11 +18,6 @@ import java.awt.event.ActionEvent;
 import java.io.File;
 
 import javax.swing.*;
-import javax.swing.AbstractAction;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
 
@@ -47,7 +42,7 @@ public class WaveInputDialog extends JDialog
     private JLabel Channels;
     private JTextField error,compressionCode,numberChannels,sampleRate,avgBytePerSec,blockAlign,signBperSample,extraFormBytes;
     private JTextField dataChunkSize;    
-    private JComboBox channels;
+    private JComboBox<String> channels;
     
     private JButton ok, cancel,browse;
 	
@@ -208,7 +203,7 @@ public class WaveInputDialog extends JDialog
         String []canale=new String[4];
         for (int i=0;i<4;i++)
            	canale[i] = ("CH ").concat(String.valueOf(i));
-        channels  = new JComboBox(canale);
+        channels  = new JComboBox<>(canale);
         channels.setSelectedIndex(0);
         channels.updateUI();
         channels.setEnabled(false);
