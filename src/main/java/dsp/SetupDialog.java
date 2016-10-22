@@ -59,7 +59,7 @@ public class SetupDialog extends JDialog
     protected InputFactory[] inputFactories = new InputFactory[] {
         new dsp.basicinput.BasicInputFactory(),
         new dsp.soundinput.SoundInputFactory(),
-        new dsp.serial.SerialInputFactory(),
+//        new dsp.serial.SerialInputFactory(),
         new dsp.dummy.ConstantInputFactory(),
         new dsp.wave.WaveInputFactory(),
         new dsp.auraw.AuRawInputFactory(),
