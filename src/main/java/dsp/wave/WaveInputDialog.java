@@ -12,11 +12,9 @@ import java.awt.Dialog;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.*;
@@ -27,11 +25,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
-
-import sun.io.Converters;
-
-//import dsp.wave.WaveInputDialog.CancelAction;
-//import dsp.wave.WaveInputDialog.OKAction;
 
 /**
  * @author silviu

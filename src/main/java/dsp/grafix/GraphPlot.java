@@ -6,7 +6,6 @@ import java.awt.event.*;
 import javax.swing.JInternalFrame;
 import javax.security.auth.Refreshable;
 
-import com.sun.rsasign.ax;
 
 
 public class GraphPlot extends Canvas implements MouseMotionListener {
