@@ -1,0 +1,4 @@
+The original sourceforge page https://sourceforge.net/projects/dsplaboratory/
+indicates BSD License to be applicable to this project.
+
+There was no license text included in the source code repository.
